@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NORMAL NON-SUSPICIOUS LOGIN -->
+<div class="login-box" id="loginBox">
+    <h2>Authentication Required</h2>
+    <p>Please enter credentials to continue.</p>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Login</button>
+</div>
+
+<!-- HIDDEN ROMANTIC CONTENT -->
+<div class="main-content" id="mainContent">
+
+    <div class="falling-text" id="fallingText"></div>
+
+    <h1>Hey You ❤️</h1>
+
+    <img src="IMG-20251025-WA0112.jpg" alt="Us">
+
+    <p>In a world full of noise,<br>you’re my favorite sound.</p>
+
+    <div class="music-player">
+        <p>Our Song 🎵</p>
+        <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/2QjOHCTQ1Jl3zawyYOpxh6"
+        width="300"
+        height="80"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+    </div>
+
+    <button onclick="showMessage()">Click Me</button>
+
+</div>
+
+<script src="script.js"></scrip
