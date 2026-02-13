@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* CLEAN LOGIN SCREEN */
+.login-box {
+    text-align: center;
+    color: #ccc;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 220px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: white;
+}
+
+button {
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* AFTER UNLOCK */
+.love-bg {
+    background: red;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: none;
+    text-align: center;
+    position: absolute;
+    color: white;
+}
+
+.main-content img {
+    width: 250px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+/* WHITE FLOATING HEARTS */
+.heart {
+    position: absolute;
+    color: white;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { bottom: -20px; opacity: 1; }
+    100% { bottom: 100%; opacity: 0; }
+}
+
+/* FALLING LETTERS */
+.falling-text {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: fall 1s forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.music-player {
+    margin-top: 20px;
+}
