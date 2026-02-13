@@ -17,7 +17,6 @@ function showMessage() {
     alert("You’re my always. ❤️");
 }
 
-/* WHITE HEARTS FLOATING */
 function startHearts() {
     setInterval(function() {
         var heart = document.createElement("div");
@@ -30,10 +29,9 @@ function startHearts() {
         setTimeout(function() {
             heart.remove();
         }, 5000);
-    }, 250);
+    }, 300);
 }
 
-/* FALLING LETTER LOOP */
 function startFallingLoop() {
     setInterval(function() {
         animateText();
@@ -45,6 +43,9 @@ function startFallingLoop() {
 function animateText() {
     var text = "Happy Valentines Day";
     var container = document.getElementById("fallingText");
+
+    if (!container) return;   // Prevent crash
+
     container.innerHTML = "";
 
     text.split("").forEach(function(letter, index) {
