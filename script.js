@@ -7,14 +7,13 @@ function checkPassword() {
         document.getElementById("mainContent").style.display = "block";
         document.body.classList.add("love-bg");
         startHearts();
-        startFallingLoop();
     } else {
-        alert("Access denied.");
+        alert("Incorrect password.");
     }
 }
 
 function showMessage() {
-    alert("You’re my always. ❤️");
+    alert("I wanna be yours. ❤️");
 }
 
 function startHearts() {
@@ -29,34 +28,5 @@ function startHearts() {
         setTimeout(function() {
             heart.remove();
         }, 5000);
-    }, 300);
-}
-
-function startFallingLoop() {
-    setInterval(function() {
-        animateText();
-    }, 6000);
-
-    animateText();
-}
-
-function animateText() {
-    var text = "Happy Valentines Day";
-    var container = document.getElementById("fallingText");
-
-    if (!container) return;   // Prevent crash
-
-    container.innerHTML = "";
-
-    text.split("").forEach(function(letter, index) {
-        var span = document.createElement("span");
-        span.className = "letter";
-        span.style.animationDelay = index * 0.1 + "s";
-        span.textContent = letter === " " ? "\u00A0" : letter;
-        container.appendChild(span);
-
-        setTimeout(function() {
-            span.textContent = "❤";
-        }, 1200 + index * 100);
-    });
+    }, 250);
 }
